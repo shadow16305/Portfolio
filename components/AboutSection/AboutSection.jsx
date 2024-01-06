@@ -22,11 +22,11 @@ const AboutSection = () => {
         />
       </div>
       <p className="text-base lg:text-lg font-['NeueMontreal'] leading-[28px] lg:max-w-[554px]">
-        Hey there! I'm passionate about crafting digital experiences through
-        code. As a web developer, I thrive on turning ideas into functional and
-        engaging websites. With a blend of creativity and technical skills, I
-        specialize in building responsive, user-friendly interfaces that leave a
-        lasting impact. Constantly exploring new technologies, I'm driven by the
+        I'm passionate about crafting digital experiences through code. As a web
+        developer, I thrive on turning ideas into functional and engaging
+        websites. With a blend of creativity and technical skills, I specialize
+        in building responsive, user-friendly interfaces that leave a lasting
+        impact. Constantly exploring new technologies, I'm driven by the
         ever-evolving landscape of web development. Let's innovate and create
         something remarkable together!
       </p>

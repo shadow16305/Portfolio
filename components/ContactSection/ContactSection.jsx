@@ -4,7 +4,7 @@ import Form from "./Form";
 const ContactSection = () => {
   return (
     <div
-      className="flex flex-col items-center pb-8 mt-40 bg-[#131417] gap-y-24 rounded-t-[100px]"
+      className="flex flex-col items-center pb-8 mt-40 bg-[#131417] gap-y-24 rounded-t-3xl md:rounded-t-[100px]"
       id="contact"
     >
       <div className="flex flex-col items-center gap-y-6 text-[#F5F5F7] mt-16">

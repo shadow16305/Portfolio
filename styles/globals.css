@@ -27,3 +27,21 @@ body {
   background-color: #f2f2f2;
   scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #131417;
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
