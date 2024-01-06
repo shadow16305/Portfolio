@@ -8,7 +8,7 @@ import SkillsSection from "@/components/SkillsSection/SkillsSection";
 const index = () => {
   return (
     <>
-      <div className="container mx-auto">
+      <div className="px-4 md:px-10">
         <HeroSection />
         <SkillsSection />
         <ProjectsSection />

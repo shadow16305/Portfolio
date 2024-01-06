@@ -3,6 +3,24 @@ import { fromBottom, lineWidth } from "@/tools/variants";
 
 import Image from "next/image";
 
+const courseLinks = [
+  {
+    id: "c1",
+    data: "Udemy - The Web Developer Bootcamp",
+    link: "https://www.udemy.com/course/the-web-developer-bootcamp/",
+  },
+  {
+    id: "c2",
+    data: "Udemy - React - The Complete Guide (incl. React Router & Redux)",
+    link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
+  },
+  {
+    id: "c3",
+    data: "Coursera - Front-End Development Capstone Project",
+    link: "https://www.coursera.org/learn/front-end-development-capstone-project",
+  },
+];
+
 const EducationSection = () => {
   return (
     <div className="relative flex flex-col items-end px-3 gap-y-9 mt-28 lg:mt-10 md:px-0">
@@ -24,36 +42,27 @@ const EducationSection = () => {
           <h2 className="text-black text-4xl lg:text-5xl 2xl:text-[64px] font-['NeueMontrealMedium']">Education</h2>
         </motion.div>
       </div>
-      <motion.div
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
-        tranisiton={{ duration: 1 }}
-        variants={fromBottom}
-        className="flex flex-col gap-y-6 font-['NeueMontrealMedium']"
-      >
-        <a
-          href="https://www.udemy.com/course/the-web-developer-bootcamp/"
-          className="relative px-2 py-4 text-xl border-b border-black group"
-        >
-          <span className="absolute top-0 left-0 z-0 w-full h-full transition-all duration-300 origin-left transform scale-x-0 group-hover:scale-x-100"></span>
-          <p className="relative z-10">Udemy - The Web Developer Bootcamp</p>
-        </a>
-        <a
-          href="https://www.udemy.com/course/the-web-developer-bootcamp/"
-          className="relative px-2 py-4 text-xl border-b border-black group"
-        >
-          <span className="absolute top-0 left-0 z-0 w-full h-full transition-all duration-300 origin-left transform scale-x-0 group-hover:scale-x-100"></span>
-          <p className="relative z-10">Udemy - React - The Complete Guide (incl. React Router & Redux)</p>
-        </a>
-        <a
-          href="https://www.coursera.org/learn/front-end-development-capstone-project"
-          className="relative px-2 py-4 text-xl border-b border-black group"
-        >
-          <span className="absolute top-0 left-0 z-0 w-full h-full transition-all duration-300 origin-left transform scale-x-0 group-hover:scale-x-100"></span>
-          <p className="relative z-10">Coursera - Front-End Development Capstone Project</p>
-        </a>
-      </motion.div>
+      <div className="flex flex-col gap-y-6 font-['NeueMontreal']">
+        {courseLinks.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+          >
+            <a
+              href={item.link}
+              target="_blank"
+              rel="norefferer"
+              data-after={item.data}
+              className="px-2 py-8 text-xl text-black pseudo-text-effect"
+            >
+              <span>{item.data}</span>
+            </a>
+            <hr className="my-4 border border-slate-300" />
+          </motion.div>
+        ))}
+      </div>
       <Image
         src="/images/dots.svg"
         alt="dots"

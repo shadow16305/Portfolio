@@ -9,7 +9,7 @@ export const fromBottom = {
     transition: {
       type: "spring",
       bounce: 0.4,
-      duration: 0.6,
+      duration: 0.8,
     },
   },
 };
