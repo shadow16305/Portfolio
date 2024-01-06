@@ -70,9 +70,7 @@ const ProjectsSection = () => {
           variants={lineWidth}
           className="h-0.5 w-28 xl:w-36 bg-[#2D17B5]"
         />
-        <h2 className="text-black text-4xl lg:text-[64px] font-['NeueMontrealMedium']">
-          Projects
-        </h2>
+        <h2 className="text-black text-4xl lg:text-[64px] font-['NeueMontrealMedium']">Projects</h2>
       </div>
       <div className="flex flex-col flex-wrap items-center justify-center w-full lg:flex-row gap-x-7 gap-y-7">
         {projectItems.map((item) => (
@@ -82,9 +80,7 @@ const ProjectsSection = () => {
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
             variants={variantMap[item.id]}
-            className={`w-11/12 ${
-              item.id === "p1" && "lg:w-[60%] text-white"
-            } ${item.id === "p2" && "lg:w-[30%]"} ${
+            className={`w-11/12 ${item.id === "p1" && "lg:w-[60%] text-white"} ${item.id === "p2" && "lg:w-[30%]"} ${
               item.id === "p3" && "lg:w-[30%]"
             } ${item.id === "p4" && "lg:w-[60%] text-white"}`}
           >
@@ -94,9 +90,7 @@ const ProjectsSection = () => {
               site={item.liveSite}
               github={item.github}
               tools={item.tools}
-              toolClassName={`${item.id === "p2" && "border-black"} ${
-                item.id === "p3" && "border-black"
-              }`}
+              toolClassName={`${item.id === "p2" && "border-black"} ${item.id === "p3" && "border-black"}`}
             />
           </motion.div>
         ))}

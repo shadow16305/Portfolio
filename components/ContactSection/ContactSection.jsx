@@ -1,5 +1,8 @@
+import { motion } from "framer-motion";
+
 import SocialLinks from "../UI/SocialLinks";
 import Form from "./Form";
+import { fromBottom } from "@/tools/variants";
 
 const ContactSection = () => {
   return (
@@ -8,13 +11,25 @@ const ContactSection = () => {
       id="contact"
     >
       <div className="flex flex-col items-center gap-y-6 text-[#F5F5F7] mt-16">
-        <h1 className="text-2xl lg:text-[64px] font-['NeueMontrealMedium']">
-          Send me a message!
-        </h1>
-        <p className="text-base lg:text-lg font-['NeueMontreal'] text-center md:max-w-[486px] px-2 md:px-0">
-          I would love to hear about your project and how I could help. Please
-          fill in the form, and I’ll get back to you as soon as possible.
-        </p>
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={fromBottom}
+        >
+          <h1 className="text-2xl lg:text-[64px] font-['NeueMontrealMedium']">Send me a message!</h1>
+        </motion.div>
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={fromBottom}
+        >
+          <p className="text-base lg:text-lg font-['NeueMontreal'] text-center md:max-w-[486px] px-2 md:px-0">
+            I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to
+            you as soon as possible.
+          </p>
+        </motion.div>
       </div>
       <Form />
       <div className="flex items-center justify-center mt-24 gap-9 lg:mt-0">

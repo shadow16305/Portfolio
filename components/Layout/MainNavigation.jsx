@@ -51,7 +51,7 @@ const MainNavigation = () => {
   return (
     <div className="fixed top-0 left-1/2 -translate-x-1/2 container mx-auto flex justify-between bg-[#F2F2F2] p-7 text-black font-['NeueMontrealMedium'] rounded-b-3xl z-50">
       <Link href="/" className="text-xl">
-        Christian Abu Khalil
+        Christian
       </Link>
       <button onClick={navbarClickHandler} className="relative z-10">
         <Image
@@ -60,9 +60,7 @@ const MainNavigation = () => {
           width={50}
           height={29}
           priority
-          className={`saturate-0 ${
-            isOpen && "invert hover:invert-0"
-          } hover:saturate-100 transition duration-300`}
+          className={`saturate-0 ${isOpen && "invert hover:invert-0"} hover:saturate-100 transition duration-300`}
         />
       </button>
       <AnimatePresence>
@@ -74,7 +72,7 @@ const MainNavigation = () => {
             transition={{ duration: 0.4 }}
             className="absolute top-0 right-0 z-0 w-screen origin-top lg:w-fit"
           >
-            <div className="flex flex-col items-start justify-center gap-y-6 text-lg ps-10 py-16 bg-black text-white w-[95vw] lg:w-[22.2em] transition-all duration-300 origin-top-right rounded-b-3xl mx-auto lg:mx-0">
+            <div className="flex flex-col items-start justify-center gap-y-6 text-lg ps-10 py-16 bg-[#131417] text-white w-[95vw] lg:w-[22.2em] transition-all duration-300 origin-top-right rounded-b-3xl mx-auto lg:mx-0">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={index}
@@ -83,9 +81,7 @@ const MainNavigation = () => {
                   transition={{ duration: 0.3, delay: index * 0.2 }}
                 >
                   <button
-                    onClick={() =>
-                      smoothScrollTo(link.link, link.offset) || setIsOpen(false)
-                    }
+                    onClick={() => smoothScrollTo(link.link, link.offset) || setIsOpen(false)}
                     className="relative group"
                   >
                     <span className="group-hover:text-white">{link.text}</span>

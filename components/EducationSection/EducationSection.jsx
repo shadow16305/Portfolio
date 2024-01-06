@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { lineWidth } from "@/tools/variants";
+import { fromBottom, lineWidth } from "@/tools/variants";
 
 import Image from "next/image";
 
@@ -11,14 +11,27 @@ const EducationSection = () => {
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}
+          tranisiton={{ duration: 1 }}
           variants={lineWidth}
           className="h-0.5 w-28 xl:w-36 bg-[#2D17B5]"
         />
-        <h2 className="text-black text-4xl lg:text-5xl 2xl:text-[64px] font-['NeueMontrealMedium']">
-          Education
-        </h2>
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={fromBottom}
+        >
+          <h2 className="text-black text-4xl lg:text-5xl 2xl:text-[64px] font-['NeueMontrealMedium']">Education</h2>
+        </motion.div>
       </div>
-      <div className="flex flex-col gap-y-6 font-['NeueMontrealMedium']">
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+        tranisiton={{ duration: 1 }}
+        variants={fromBottom}
+        className="flex flex-col gap-y-6 font-['NeueMontrealMedium']"
+      >
         <a
           href="https://www.udemy.com/course/the-web-developer-bootcamp/"
           className="relative px-2 py-4 text-xl border-b border-black group"
@@ -31,20 +44,16 @@ const EducationSection = () => {
           className="relative px-2 py-4 text-xl border-b border-black group"
         >
           <span className="absolute top-0 left-0 z-0 w-full h-full transition-all duration-300 origin-left transform scale-x-0 group-hover:scale-x-100"></span>
-          <p className="relative z-10">
-            Udemy - React - The Complete Guide (incl. React Router & Redux)
-          </p>
+          <p className="relative z-10">Udemy - React - The Complete Guide (incl. React Router & Redux)</p>
         </a>
         <a
           href="https://www.coursera.org/learn/front-end-development-capstone-project"
           className="relative px-2 py-4 text-xl border-b border-black group"
         >
           <span className="absolute top-0 left-0 z-0 w-full h-full transition-all duration-300 origin-left transform scale-x-0 group-hover:scale-x-100"></span>
-          <p className="relative z-10">
-            Coursera - Front-End Development Capstone Project
-          </p>
+          <p className="relative z-10">Coursera - Front-End Development Capstone Project</p>
         </a>
-      </div>
+      </motion.div>
       <Image
         src="/images/dots.svg"
         alt="dots"

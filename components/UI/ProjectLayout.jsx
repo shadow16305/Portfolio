@@ -6,26 +6,12 @@ const ProjectLayout = (props) => {
     >
       <div className="flex flex-col gap-y-2">
         <h3 className="text-3xl">{props.title}</h3>
-        <p
-          className={`hidden lg:block border rounded-3xl px-3 py-1 text-base ${props.toolClassName}`}
-        >
-          {props.tools}
-        </p>
+        <p className={`hidden lg:block border rounded-3xl px-3 py-1 text-base ${props.toolClassName}`}>{props.tools}</p>
         <div className="flex gap-x-10 lg:hidden">
-          <a
-            href={props.site}
-            className="text-2xl"
-            target="_blank"
-            rel="norefferer"
-          >
+          <a href={props.site} className="text-2xl" target="_blank" rel="norefferer">
             Live site
           </a>
-          <a
-            href={props.github}
-            className="text-2xl"
-            target="_blank"
-            rel="norefferer"
-          >
+          <a href={props.github} className="text-2xl" target="_blank" rel="norefferer">
             Github
           </a>
         </div>
@@ -34,13 +20,11 @@ const ProjectLayout = (props) => {
         <div className="flex gap-x-10 lg:text-white">
           <a
             href={props.site}
-            className="text-3xl relative w-[165px] h-[45px] rounded-[50px] font-['NeueMontreal'] transition-colors duration-300 overflow-hidden group flex justify-center items-center"
+            className="text-3xl border relative w-[165px] h-[45px] rounded-[50px] font-['NeueMontreal'] transition-colors duration-300 overflow-hidden group flex justify-center items-center"
             target="_blank"
             rel="norefferer"
           >
-            <span className="relative z-10 group-hover:lg:text-black">
-              Live Site
-            </span>
+            <span className="relative z-10 group-hover:lg:text-black">Live Site</span>
             <span className="absolute w-full h-full bg-white top-0 left-0 rounded-[50px] origin-left z-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
           </a>
           <a
@@ -49,9 +33,7 @@ const ProjectLayout = (props) => {
             target="_blank"
             rel="norefferer"
           >
-            <span className="relative z-10 group-hover:lg:text-black">
-              Github
-            </span>
+            <span className="relative z-10 group-hover:lg:text-black">Github</span>
             <span className="absolute w-full h-full bg-white top-0 left-0 rounded-[50px] origin-left z-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
           </a>
         </div>
