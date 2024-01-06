@@ -30,18 +30,13 @@ const SocialLinks = (props) => {
       <div className={`flex gap-6 ${props.className}`}>
         {socialIcons.map((icon) => (
           <a
+            key={icon.id}
             href={icon.link}
             target="_blank"
             rel="noreferrer"
             className="transition duration-300 hover:scale-125"
           >
-            <Image
-              key={icon.id}
-              src={icon.imgSrc}
-              alt={icon.alt}
-              width={32}
-              height={32}
-            />
+            <Image src={icon.imgSrc} alt={icon.alt} width={32} height={32} />
           </a>
         ))}
       </div>
