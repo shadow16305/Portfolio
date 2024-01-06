@@ -26,7 +26,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center lg:justify-between mt-[187px] xl:mt-[211px] relative">
+    <div className="flex flex-col lg:flex-row justify-center lg:justify-between mt-[187px] xl:mt-40 2xl:mt-[211px] relative">
       <div className="flex flex-col gap-y-4 lg:gap-y-16 ps-3 lg:ps-0">
         <h1 className="text-black text-4xl lg:text-8xl font-['NeueMontrealMedium'] flex flex-col lg:gap-y-6 leading-normal">
           Nice to meet you! <span>I’m Chris.</span>
