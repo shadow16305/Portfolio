@@ -1,3 +1,4 @@
+import { fromBottom } from "@/tools/variants";
 import { motion } from "framer-motion";
 
 const skills = [
@@ -47,10 +48,11 @@ const skills = [
 const Skills = () => {
   return (
     <motion.div
-      initial="hidden"
-      animate="visible"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true }}
       variants={{
-        visible: {
+        onscreen: {
           transition: {
             staggerChildren: 0.2,
           },
@@ -61,21 +63,7 @@ const Skills = () => {
       {skills.map((skill) => (
         <motion.div
           key={skill.id}
-          variants={{
-            hidden: {
-              opacity: 0,
-              y: 20,
-            },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: {
-                type: "spring",
-                bounce: 0.4,
-                duration: 0.6,
-              },
-            },
-          }}
+          variants={fromBottom}
           className="bg-[#4831D4] bg-opacity-10 px-8 py-4 rounded-xl font-['NeueMontreal']"
         >
           <p>{skill.name}</p>

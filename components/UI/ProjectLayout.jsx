@@ -38,7 +38,7 @@ const ProjectLayout = (props) => {
             target="_blank"
             rel="norefferer"
           >
-            <span className="group-hover:lg:text-black relative z-10">
+            <span className="relative z-10 group-hover:lg:text-black">
               Live Site
             </span>
             <span className="absolute w-full h-full bg-white top-0 left-0 rounded-[50px] origin-left z-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
@@ -49,7 +49,7 @@ const ProjectLayout = (props) => {
             target="_blank"
             rel="norefferer"
           >
-            <span className="group-hover:lg:text-black relative z-10">
+            <span className="relative z-10 group-hover:lg:text-black">
               Github
             </span>
             <span className="absolute w-full h-full bg-white top-0 left-0 rounded-[50px] origin-left z-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></span>

@@ -25,4 +25,5 @@ body {
   margin: 0;
   font-family: "NeueMontreal";
   background-color: #f2f2f2;
+  scroll-behavior: smooth;
 }

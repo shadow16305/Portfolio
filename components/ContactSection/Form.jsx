@@ -3,7 +3,7 @@ import React from "react";
 const Form = () => {
   return (
     <div className="flex flex-col items-center gap-y-12 md:gap-y-32 md:w-[60vw] text-white">
-      <div className="flex flex-col md:flex-row md:justify-between gap-y-12 md:gap-y-0 w-full">
+      <div className="flex flex-col w-full md:flex-row md:justify-between gap-y-12 md:gap-y-0">
         <input
           type="text"
           placeholder="Name"
@@ -22,7 +22,7 @@ const Form = () => {
           className="w-[242px] md:w-full bg-transparent border-b border-white focus:outline-none py-2"
         />
       </div>
-      <button className="text-black text-2xl font-['NeueMontrealBold'] border-2 bg-white w-[212px] h-[61px] rounded-[50px] hover:text-white hover:bg-black transition-colors duration-300 mt-16 md:mt-0">
+      <button className="text-black text-2xl font-['NeueMontrealBold'] border-2 bg-white w-[212px] h-[61px] rounded-[50px] hover:text-white hover:bg-transparent transition-colors duration-300 mt-16 md:mt-0">
         Send
       </button>
     </div>

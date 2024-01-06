@@ -3,7 +3,10 @@ import Form from "./Form";
 
 const ContactSection = () => {
   return (
-    <div className="flex flex-col items-center gap-y-24 bg-black mt-40 pb-8">
+    <div
+      className="flex flex-col items-center pb-8 mt-40 bg-[#131417] gap-y-24 rounded-t-[100px]"
+      id="contact"
+    >
       <div className="flex flex-col items-center gap-y-6 text-[#F5F5F7] mt-16">
         <h1 className="text-2xl lg:text-[64px] font-['NeueMontrealMedium']">
           Send me a message!
@@ -14,7 +17,7 @@ const ContactSection = () => {
         </p>
       </div>
       <Form />
-      <div className="flex items-center justify-center gap-9 mt-24 lg:mt-0">
+      <div className="flex items-center justify-center mt-24 gap-9 lg:mt-0">
         <SocialLinks
           className="invert"
           lineOneClassName="lg:w-[144px] lg:h-[2px] bg-white"

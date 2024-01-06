@@ -61,7 +61,7 @@ const variantMap = {
 
 const ProjectsSection = () => {
   return (
-    <div className="flex flex-col gap-y-14 mt-28 lg:mt-40 w-full">
+    <div className="flex flex-col w-full gap-y-14 mt-28 lg:mt-40" id="projects">
       <div className="flex items-end justify-end gap-x-7 me-7">
         <motion.div
           initial="offscreen"
@@ -74,7 +74,7 @@ const ProjectsSection = () => {
           Projects
         </h2>
       </div>
-      <div className="flex flex-col items-center lg:flex-row flex-wrap justify-center w-full gap-x-7 gap-y-7">
+      <div className="flex flex-col flex-wrap items-center justify-center w-full lg:flex-row gap-x-7 gap-y-7">
         {projectItems.map((item) => (
           <motion.div
             key={item.id}
