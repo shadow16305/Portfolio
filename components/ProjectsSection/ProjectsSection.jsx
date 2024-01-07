@@ -37,7 +37,7 @@ const projectItems = [
   {
     id: "p3",
     title: "Dictionary Web-app",
-    src: "../images/dictionary.webp",
+    src: "../images/dictionary.png",
     liveSite: "https://playful-wisp-be75a2.netlify.app/",
     github: "https://github.com/shadow16305/dictionary-web-app",
     tools: "React, TailwindCSS, API",
@@ -80,9 +80,9 @@ const ProjectsSection = () => {
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
             variants={variantMap[item.id]}
-            className={`w-11/12 ${item.id === "p1" && "lg:w-[60%]"} ${item.id === "p2" && "lg:w-[35%]"} ${
+            className={`w-11/12 ${item.id === "p1" && "lg:w-[60%] text-white"} ${item.id === "p2" && "lg:w-[35%]"} ${
               item.id === "p3" && "lg:w-[35%]"
-            } ${item.id === "p4" && "lg:w-[60%]"}`}
+            } ${item.id === "p4" && "lg:w-[60%] text-white"}`}
           >
             <ProjectLayout
               title={item.title}

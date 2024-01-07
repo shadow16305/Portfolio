@@ -44,14 +44,14 @@ const AboutSection = () => {
         alt="dots"
         width={100}
         height={100}
-        className="absolute -top-10 lg:top-0 right-2 lg:right-[10%] 2xl:right-0 max-w-14 lg:max-w-none"
+        className="absolute -top-10 lg:top-20 right-2 lg:right-[10%] 2xl:right-0 max-w-14 lg:max-w-none"
       />
       <Image
         src="/images/stairs.svg"
         alt="stairs"
         width={61}
         height={58}
-        className="absolute hidden bottom-10 lg:bottom-0 right-3/4 lg:right-1/4 2xl:right-2/4 lg:block"
+        className="absolute hidden bottom-10 lg:top-16 right-3/4 lg:right-1/4 2xl:right-[58%] lg:block"
       />
     </div>
   );

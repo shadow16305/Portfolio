@@ -17,9 +17,9 @@ const ProjectLayout = (props) => {
         </div>
       </div>
       <div className="hidden lg:flex justify-center items-center absolute z-10 opacity-0 hover:opacity-100 bg-black bg-opacity-70 transition-all duration-300 h-full w-full left-0 top-0 rounded-[50px]">
-        <div className="flex flex-col items-center justify-between h-full py-4 text-white font-['NeueMontreal']">
+        <div className="flex flex-col items-center justify-between h-full py-8 text-white font-['NeueMontreal']">
           <h3 className="text-3xl">{props.title}</h3>
-          <div className="flex gap-x-10">
+          <div className="flex lg:gap-x-8 xl:gap-x-10">
             <a
               href={props.site}
               className="text-2xl border border-white relative w-[165px] h-[45px] rounded-[50px] font-['NeueMontreal'] transition-colors duration-300 overflow-hidden group flex justify-center items-center"

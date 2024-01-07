@@ -5,7 +5,7 @@ import Skills from "./Skills";
 const SkillsSection = () => {
   return (
     <div
-      className="mt-28 lg:mt-[266px] flex flex-col lg:flex-row lg:justify-between xl:gap-x-10 2xl:gap-x-16 gap-y-7"
+      className="flex flex-col mt-28 lg:mt-40 lg:flex-row lg:justify-between xl:gap-x-10 2xl:gap-x-16 gap-y-7"
       id="skills"
     >
       <div className="flex lg:items-center">

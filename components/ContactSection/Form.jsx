@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = () => {
   return (
-    <div className="flex flex-col items-center gap-y-12 md:gap-y-32 md:w-[60vw] text-white">
+    <div className="flex flex-col items-center gap-y-12 md:gap-y-20 md:w-[60vw] text-white">
       <div className="flex flex-col w-full md:flex-row md:justify-between gap-y-12 md:gap-y-0">
         <input
           type="text"

@@ -48,6 +48,7 @@ const EducationSection = () => {
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >
             <a
@@ -55,7 +56,7 @@ const EducationSection = () => {
               target="_blank"
               rel="norefferer"
               data-after={item.data}
-              className="px-2 py-8 text-xl text-black pseudo-text-effect"
+              className="px-2 py-8 text-lg text-black pseudo-text-effect"
             >
               <span>{item.data}</span>
             </a>
@@ -68,14 +69,14 @@ const EducationSection = () => {
         alt="dots"
         width={100}
         height={100}
-        className="absolute -top-10 lg:top-0 left-2 lg:left-[10%] 2xl:left-0 max-w-14 lg:max-w-none"
+        className="absolute -top-10 lg:top-1/2 left-2 lg:left-[10%] 2xl:left-0 max-w-14 lg:max-w-none"
       />
       <Image
         src="/images/stairs.svg"
         alt="stairs"
         width={61}
         height={58}
-        className="absolute hidden rotate-90 bottom-10 lg:-bottom-20 right-3/4 lg:right-0 lg:block"
+        className="absolute hidden rotate-90 bottom-10 lg:-bottom-10 right-3/4 lg:-right-10 lg:block"
       />
     </div>
   );
