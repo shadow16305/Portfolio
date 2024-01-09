@@ -26,7 +26,7 @@ body {
   font-family: "NeueMontreal";
   background-color: #f2f2f2;
   scroll-behavior: smooth;
-  overflow-h: hidden;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
