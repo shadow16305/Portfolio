@@ -13,6 +13,54 @@ export const fromBottom = {
     },
   },
 };
+
+export const fromTop = {
+  offscreen: {
+    y: -100,
+    opacity: 0,
+  },
+  firstElem: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.4,
+      delay: 0.2,
+    },
+  },
+  secondElem: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.4,
+      delay: 0.3,
+    },
+  },
+  thirdElem: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.4,
+      delay: 0.4,
+    },
+  },
+  fourthElem: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.4,
+      delay: 0.5,
+    },
+  },
+};
+
 export const fromRight = {
   offscreen: {
     x: 100,
@@ -28,6 +76,7 @@ export const fromRight = {
     },
   },
 };
+
 export const fromLeft = {
   offscreen: {
     x: -100,

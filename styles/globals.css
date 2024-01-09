@@ -40,7 +40,6 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #131417;
   transition: 0.5s;
-  border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

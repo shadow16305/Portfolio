@@ -58,7 +58,7 @@ const Skills = () => {
           },
         },
       }}
-      className="flex flex-wrap justify-center lg:justify-start gap-x-2 gap-y-2 lg:gap-x-11 lg:gap-y-5 lg:max-w-[700px] xl:max-w-[900px] px-2 md:px-0"
+      className="flex flex-wrap justify-center lg:justify-start gap-x-2 gap-y-2 md:gap-x-11 md:gap-y-5 lg:max-w-[700px] xl:max-w-[900px] px-2 md:px-0"
     >
       {skills.map((skill) => (
         <motion.div

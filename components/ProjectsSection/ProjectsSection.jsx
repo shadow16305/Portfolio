@@ -72,7 +72,7 @@ const ProjectsSection = () => {
         />
         <h2 className="text-black text-4xl lg:text-[64px] font-['NeueMontrealMedium']">Projects</h2>
       </div>
-      <div className="flex flex-col flex-wrap items-center justify-center w-full lg:flex-row gap-x-5 gap-y-5">
+      <div className="flex flex-col flex-wrap items-center justify-center w-full md:flex-row gap-x-5 gap-y-5">
         {projectItems.map((item) => (
           <motion.div
             key={item.id}
@@ -80,9 +80,9 @@ const ProjectsSection = () => {
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
             variants={variantMap[item.id]}
-            className={`w-11/12 ${item.id === "p1" && "lg:w-[60%] text-white"} ${item.id === "p2" && "lg:w-[35%]"} ${
-              item.id === "p3" && "lg:w-[35%]"
-            } ${item.id === "p4" && "lg:w-[60%] text-white"}`}
+            className={`w-11/12 ${item.id === "p1" && "md:w-[60%] text-white"} ${item.id === "p2" && "md:w-[35%]"} ${
+              item.id === "p3" && "md:w-[35%]"
+            } ${item.id === "p4" && "md:w-[60%] text-white"}`}
           >
             <ProjectLayout
               title={item.title}

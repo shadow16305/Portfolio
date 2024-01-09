@@ -6,17 +6,20 @@ import Image from "next/image";
 const courseLinks = [
   {
     id: "c1",
-    data: "Udemy - The Web Developer Bootcamp",
+    text: "Udemy - The Web Developer Bootcamp",
+    data: "View course",
     link: "https://www.udemy.com/course/the-web-developer-bootcamp/",
   },
   {
     id: "c2",
-    data: "Udemy - React - The Complete Guide (incl. React Router & Redux)",
+    text: "Udemy - React - The Complete Guide (incl. React Router & Redux)",
+    data: "View course",
     link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
   },
   {
     id: "c3",
-    data: "Coursera - Front-End Development Capstone Project",
+    text: "Coursera - Front-End Development Capstone Project",
+    data: "View course",
     link: "https://www.coursera.org/learn/front-end-development-capstone-project",
   },
 ];
@@ -58,7 +61,7 @@ const EducationSection = () => {
               data-after={item.data}
               className="px-2 py-8 text-lg text-black pseudo-text-effect"
             >
-              <span>{item.data}</span>
+              <span>{item.text}</span>
             </a>
             <hr className="my-4 border border-slate-300" />
           </motion.div>

@@ -1,7 +1,7 @@
 const ProjectLayout = (props) => {
   return (
     <div
-      className={`h-[520px] bg-cover bg-center flex items-end pb-10 px-4 lg:px-0 lg:ps-10 rounded-[50px] relative hover:scale-95 transition-all duration-300 font-['NeueMontreal'] ${props.className}`}
+      className={`h-[400px] md:h-[300px] lg:h-[520px] bg-cover bg-center flex items-end pb-10 px-4 lg:px-0 lg:ps-10 rounded-[50px] relative hover:scale-95 transition-all duration-300 font-['NeueMontreal'] ${props.className}`}
       style={{ backgroundImage: `url('${props.bgUrl}')` }}
     >
       <div className="flex flex-col gap-y-2">

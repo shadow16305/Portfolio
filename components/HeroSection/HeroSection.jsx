@@ -26,9 +26,9 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center lg:justify-between mt-[187px] xl:mt-40 2xl:mt-[211px] relative">
+    <div className="flex flex-col md:flex-row md:items-center justify-center md:justify-between mt-[187px] xl:mt-40 2xl:mt-[211px] relative">
       <div className="flex flex-col gap-y-4 lg:gap-y-16">
-        <h1 className="text-black text-4xl lg:text-8xl font-['NeueMontrealMedium'] flex flex-col lg:gap-y-6 leading-normal">
+        <h1 className="text-black text-4xl md:text-6xl lg:text-8xl font-['NeueMontrealMedium'] flex flex-col md:gap-y-6 leading-normal">
           Nice to meet you! <span>I’m Chris.</span>
           <span className="text-[#2D17B5] typewriter"></span>
         </h1>
@@ -40,11 +40,11 @@ const HeroSection = () => {
           <p className="relative z-10">Contact me</p>
         </button>
       </div>
-      <div className="flex items-center justify-center mt-32 lg:flex-col gap-9 lg:mt-0">
+      <div className="flex items-center justify-center mt-32 md:flex-col gap-9 md:mt-0">
         <SocialLinks
-          className="lg:flex-col"
-          lineOneClassName="lg:h-[144px] lg:w-[2px]"
-          lineTwoClassName="lg:h-[144px] lg:w-[2px]"
+          className="md:flex-col"
+          lineOneClassName="md:h-[144px] md:w-[2px]"
+          lineTwoClassName="md:h-[144px] md:w-[2px]"
         />
       </div>
       <Image
@@ -52,14 +52,14 @@ const HeroSection = () => {
         alt="dots"
         width={100}
         height={100}
-        className="absolute -top-10 lg:top-0 right-2 lg:right-[10%] 2xl:right-1/4 max-w-14 lg:max-w-none"
+        className="absolute -top-10 lg:top-0 right-2 md:right-[10%] 2xl:right-1/4 max-w-14 lg:max-w-none"
       />
       <Image
         src="/images/stairs.svg"
         alt="stairs"
         width={61}
         height={58}
-        className="absolute bottom-10 lg:bottom-0 right-3/4 lg:right-1/4"
+        className="absolute bottom-10 lg:bottom-0 right-3/4 md:right-1/4"
       />
     </div>
   );
