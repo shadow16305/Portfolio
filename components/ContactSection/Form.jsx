@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { motion } from "framer-motion";
 import { fromTop, opacityVariants } from "@/tools/variants";
 
@@ -11,15 +13,17 @@ const Form = ({ value }) => {
         animate="onscreen"
         exit="offscreen"
         variants={opacityVariants}
-        className="flex justify-center md:block gap-x-6"
+        className="flex items-center justify-center md:block gap-x-6"
       >
         <div className="md:absolute md:left-10">
           <button
-            data-after="Close"
+            data-after="close"
             onClick={() => setShowForm(false)}
-            className="font-['NeueMontrealMedium'] pseudo-text-effect text-base md:text-xl"
+            className="font-['NeueMontrealMedium'] pseudo-text-effect text-base md:text-xl w-14"
           >
-            <span>Close</span>
+            <span>
+              <Image src="/images/x.svg" alt="close" width={32} height={32} />
+            </span>
           </button>
         </div>
         <p className="text-base font-['NeueMontreal'] md:text-center md:max-w-[340px] lg:max-w-[486px]">

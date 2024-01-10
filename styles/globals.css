@@ -57,7 +57,7 @@ body {
   .pseudo-text-effect::after {
     content: attr(data-after);
     display: inline-block;
-    transform: translateY(100%);
+    transform: translateY(120%);
     position: absolute;
     left: 0;
     transition: inherit;
