@@ -16,31 +16,34 @@ const skills = [
   },
   {
     id: "s4",
-    name: "React.js",
+    name: "TypeScript",
   },
   {
     id: "s5",
-    name: "Next.js",
+    name: "React.js",
   },
   {
     id: "s6",
-    name: "Express",
+    name: "Next.js",
   },
   {
     id: "s7",
-    name: "Tailwind",
+    name: "Express",
   },
   {
     id: "s8",
-    name: "Node.js",
+    name: "Tailwind",
   },
   {
     id: "s9",
-    name: "Bootstrap",
+    name: "Node.js",
   },
-
   {
     id: "s10",
+    name: "Bootstrap",
+  },
+  {
+    id: "s11",
     name: "MongoDB",
   },
 ];
@@ -58,7 +61,7 @@ const Skills = () => {
           },
         },
       }}
-      className="flex flex-wrap justify-center lg:justify-start gap-x-2 gap-y-2 md:gap-x-11 md:gap-y-5 lg:max-w-[700px] xl:max-w-[900px] px-2 md:px-0"
+      className="flex flex-wrap justify-center gap-x-2 gap-y-2 md:gap-x-11 md:gap-y-5 lg:max-w-[700px] xl:max-w-[950px] px-2 md:px-0"
     >
       {skills.map((skill) => (
         <motion.div
