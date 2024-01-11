@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { fromTop, opacityVariants } from "@/tools/variants";
 
 const Form = ({ value }) => {
-  const { setShowForm } = value;
+  const { setShowForm, setIsHovered } = value;
 
   return (
     <div className="flex flex-col items-center gap-y-12 w-[95vw] lg:w-[60vw] h-full text-white relative bg-[#131417] rounded-b-[50px] pt-7 px-10 pb-5">
@@ -19,6 +19,8 @@ const Form = ({ value }) => {
           <button
             data-after="close"
             onClick={() => setShowForm(false)}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             className="font-['NeueMontrealMedium'] pseudo-text-effect text-base md:text-xl w-14"
           >
             <span>
@@ -73,7 +75,11 @@ const Form = ({ value }) => {
         />
       </motion.div>
       <motion.div initial="offscreen" animate="fourthElem" exit="offscreen" variants={fromTop}>
-        <button className="text-black text-2xl font-['NeueMontrealBold'] border-2 bg-white w-[180px] h-[50px] rounded-[50px] hover:text-white hover:bg-transparent transition-colors duration-300 ">
+        <button
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="text-black text-2xl font-['NeueMontrealBold'] border-2 bg-white w-[180px] h-[50px] rounded-[50px] hover:text-white hover:bg-transparent transition-colors duration-300 "
+        >
           Send
         </button>
       </motion.div>

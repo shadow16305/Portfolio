@@ -24,7 +24,9 @@ const courseLinks = [
   },
 ];
 
-const EducationSection = () => {
+const EducationSection = ({ hovered }) => {
+  const { setIsHovered } = hovered;
+
   return (
     <div className="relative flex flex-col items-end px-3 gap-y-9 mt-28 lg:mt-10 md:px-0">
       <div className="flex items-end lg:gap-x-3 2xl:gap-x-7">
@@ -58,6 +60,8 @@ const EducationSection = () => {
               href={item.link}
               target="_blank"
               rel="norefferer"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
               data-after={item.data}
               className="px-2 py-8 text-lg text-black pseudo-text-effect"
             >

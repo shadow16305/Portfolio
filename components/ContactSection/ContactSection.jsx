@@ -6,7 +6,9 @@ import Form from "./Form";
 import { fromBottom } from "@/tools/variants";
 import Image from "next/image";
 
-const ContactSection = () => {
+const ContactSection = ({ hovered }) => {
+  const { setIsHovered } = hovered;
+
   const [showForm, setShowForm] = useState(false);
 
   const formDisplayHandler = () => {
@@ -34,6 +36,8 @@ const ContactSection = () => {
           <button
             onClick={formDisplayHandler}
             data-after="Send me a message!"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             className="text-2xl md:text-4xl font-['NeueMontrealMedium'] pseudo-text-effect"
           >
             <span>Send me a message!</span>
@@ -84,7 +88,7 @@ const ContactSection = () => {
             transition={{ duration: 0.4 }}
             className="fixed top-0 left-0 flex items-center justify-center w-full h-[70vh] z-50 origin-top"
           >
-            <Form value={{ showForm, setShowForm }} />
+            <Form value={{ setShowForm, setIsHovered }} />
           </motion.div>
         )}
       </AnimatePresence>
