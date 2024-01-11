@@ -9,7 +9,7 @@ import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection/SkillsSection";
 import DotCursor from "@/components/UI/DotCursor";
 
-const index = () => {
+const MainPage = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -33,4 +33,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default MainPage;

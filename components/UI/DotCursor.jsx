@@ -20,23 +20,21 @@ const DotCursor = ({ hovered }) => {
 
   return (
     <motion.span
-      className={`rounded-full bg-black fixed top-0 left-0 z-[999] border border-white ${
-        isHovered && "backdrop-blur-sm"
-      }`}
+      className={`hidden lg:block rounded-full fixed -top-3 -left-3 z-[999] border pointer-events-none ${
+        isHovered ? "border-white" : "border-black"
+      } backdrop-blur-sm`}
       animate={{
-        x: mousePos.x,
-        y: mousePos.y,
-        width: isHovered ? "50px" : "16px",
-        height: isHovered ? "50px" : "16px",
-        background: isHovered ? "transparent" : "black",
+        x: isHovered ? mousePos.x - 32 : mousePos.x,
+        y: isHovered ? mousePos.y - 32 : mousePos.y,
+        width: isHovered ? "80px" : "16px",
+        height: isHovered ? "80px" : "16px",
       }}
       transition={{
         type: "tween",
         x: { duration: 0.02 },
         y: { duration: 0.02 },
-        width: { duration: 0.3 },
-        height: { duration: 0.3 },
-        background: { duration: 0.3 },
+        width: { duration: 0.6, type: "spring" },
+        height: { duration: 0.6, type: "spring" },
       }}
     />
   );

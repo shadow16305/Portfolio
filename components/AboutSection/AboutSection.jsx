@@ -44,7 +44,7 @@ const AboutSection = () => {
         alt="dots"
         width={100}
         height={100}
-        className="absolute -top-10 lg:top-20 right-2 lg:right-[10%] 2xl:right-0 max-w-14 lg:max-w-none"
+        className="absolute -top-10 lg:top-20 right-2 lg:right-[10%] 2xl:right-0 max-w-14 h-auto lg:max-w-none"
       />
       <Image
         src="/images/stairs.svg"

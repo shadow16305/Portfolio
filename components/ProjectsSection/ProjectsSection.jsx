@@ -3,20 +3,6 @@ import { lineWidth, fromBottom, fromRight, fromLeft } from "@/tools/variants";
 
 import ProjectLayout from "../UI/ProjectLayout";
 
-let cardPositionBottom = {};
-let cardPositionRight = {};
-let cardPositionLeft = {};
-
-if (typeof window !== "undefined") {
-  const isMobile = window.innerWidth < 768;
-
-  if (!isMobile) {
-    cardPositionBottom = fromBottom;
-    cardPositionRight = fromRight;
-    cardPositionLeft = fromLeft;
-  }
-}
-
 const projectItems = [
   {
     id: "p1",
@@ -52,20 +38,20 @@ const projectItems = [
   },
 ];
 
-const variantMap = {
-  p1: cardPositionBottom,
-  p2: cardPositionRight,
-  p3: cardPositionLeft,
-  p4: cardPositionBottom,
-};
-
 const ProjectsSection = ({ hovered }) => {
   const { setIsHovered } = hovered;
+
+  const variantMap = {
+    p1: fromBottom,
+    p2: fromRight,
+    p3: fromLeft,
+    p4: fromBottom,
+  };
 
   return (
     <div className="flex flex-col w-full gap-y-14 mt-28 lg:mt-40" id="projects">
       <div className="flex items-end justify-end gap-x-7 me-7">
-        <motion.div
+        <motion.span
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true }}
@@ -74,7 +60,7 @@ const ProjectsSection = ({ hovered }) => {
         />
         <h2 className="text-black text-4xl lg:text-[64px] font-['NeueMontrealMedium']">Projects</h2>
       </div>
-      <div className="flex flex-col flex-wrap items-center justify-center w-full md:flex-row gap-x-5 gap-y-5">
+      <div className="flex flex-col flex-wrap items-center justify-center w-full overflow-hidden md:flex-row gap-x-5 gap-y-5">
         {projectItems.map((item) => (
           <motion.div
             key={item.id}
