@@ -59,14 +59,16 @@ const variantMap = {
   p4: cardPositionBottom,
 };
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ hovered }) => {
+  const { setIsHovered } = hovered;
+
   return (
     <div className="flex flex-col w-full gap-y-14 mt-28 lg:mt-40" id="projects">
       <div className="flex items-end justify-end gap-x-7 me-7">
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true }}
           variants={lineWidth}
           className="h-0.5 w-28 xl:w-36 bg-[#2D17B5]"
         />
@@ -76,9 +78,11 @@ const ProjectsSection = () => {
         {projectItems.map((item) => (
           <motion.div
             key={item.id}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8 }}
+            viewport={{ once: true }}
             variants={variantMap[item.id]}
             className={`w-11/12 ${item.id === "p1" && "md:w-[60%] text-white"} ${item.id === "p2" && "md:w-[35%]"} ${
               item.id === "p3" && "md:w-[35%]"
