@@ -22,11 +22,11 @@ const projectItems = [
   },
   {
     id: "p3",
-    title: "Dictionary Web-app",
-    src: "../images/dictionary.png",
-    liveSite: "https://playful-wisp-be75a2.netlify.app/",
-    github: "https://github.com/shadow16305/dictionary-web-app",
-    tools: "React, TailwindCSS, API",
+    title: "Entertainment Web App",
+    src: "../images/entertainment-web-app.png",
+    liveSite: "https://entertainment-web-app-weld-eight.vercel.app/",
+    github: "https://github.com/shadow16305/entertainment-web-app",
+    tools: "Next, TailwindCSS, API, MongoDB, NextAuth, Typescript",
   },
   {
     id: "p4",
@@ -56,7 +56,7 @@ const ProjectsSection = ({ hovered }) => {
           whileInView="onscreen"
           viewport={{ once: true }}
           variants={lineWidth}
-          className="h-0.5 w-28 xl:w-36 bg-[#2D17B5]"
+          className="h-0.5 w-28 xl:w-36 bg-neon-blue"
         />
         <h2 className="text-black text-4xl lg:text-[64px] font-['NeueMontrealMedium']">Projects</h2>
       </div>
@@ -72,8 +72,7 @@ const ProjectsSection = ({ hovered }) => {
             variants={variantMap[item.id]}
             className={`w-11/12 ${item.id === "p1" && "md:w-[60%] text-white"} ${item.id === "p2" && "md:w-[35%]"} ${
               item.id === "p3" && "md:w-[35%]"
-            } ${item.id === "p4" && "md:w-[60%] text-white"}`}
-          >
+            } ${item.id === "p4" && "md:w-[60%] text-white"}`}>
             <ProjectLayout
               title={item.title}
               bgUrl={item.src}

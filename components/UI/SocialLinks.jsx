@@ -24,9 +24,7 @@ const socialIcons = [
 const SocialLinks = (props) => {
   return (
     <>
-      <div
-        className={`bg-[#2D17B5] w-[80px] h-[2px] ${props.lineOneClassName}`}
-      ></div>
+      <div className={`w-[80px] h-[2px] ${props.lineOneClassName}`}></div>
       <div className={`flex gap-6 ${props.className}`}>
         {socialIcons.map((icon) => (
           <a
@@ -34,15 +32,12 @@ const SocialLinks = (props) => {
             href={icon.link}
             target="_blank"
             rel="noreferrer"
-            className="transition duration-300 hover:scale-125"
-          >
+            className="transition duration-300 hover:scale-125">
             <Image src={icon.imgSrc} alt={icon.alt} width={32} height={32} />
           </a>
         ))}
       </div>
-      <div
-        className={`bg-[#2D17B5] w-[80px] h-[2px] ${props.lineTwoClassName}`}
-      ></div>
+      <div className={`w-[80px] h-[2px] ${props.lineTwoClassName}`}></div>
     </>
   );
 };

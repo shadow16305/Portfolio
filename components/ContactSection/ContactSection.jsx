@@ -31,15 +31,13 @@ const ContactSection = ({ hovered }) => {
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}
           variants={fromBottom}
-          className="text-[#F5F5F7] mt-10 lg:mt-16 py-10 lg:py-20"
-        >
+          className="text-[#F5F5F7] mt-10 lg:mt-16 py-10 lg:py-20">
           <button
             onClick={formDisplayHandler}
             data-after="Send me a message!"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="text-2xl md:text-4xl font-['NeueMontrealMedium'] pseudo-text-effect"
-          >
+            className="text-2xl md:text-4xl font-['NeueMontrealMedium'] pseudo-text-effect">
             <span>Send me a message!</span>
           </button>
         </motion.div>
@@ -67,16 +65,16 @@ const ContactSection = ({ hovered }) => {
         <Image
           src="/images/stairs-white.svg"
           alt="stairs"
-          width={61}
-          height={58}
-          className="absolute rotate-90 right-[30%] top-14 hidden lg:block"
+          width={0}
+          height={0}
+          className="absolute rotate-90 right-[30%] top-14 hidden lg:block h-auto w-16"
         />
         <Image
           src="/images/stairs-white.svg"
           alt="stairs"
-          width={61}
-          height={58}
-          className="absolute top-2/3 left-[23%] hidden lg:block"
+          width={0}
+          height={0}
+          className="absolute top-2/3 left-[23%] hidden lg:block h-auto w-16"
         />
       </div>
       <AnimatePresence mode="wait">
@@ -86,8 +84,7 @@ const ContactSection = ({ hovered }) => {
             animate={{ height: "auto" }}
             exit={{ height: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed top-0 left-0 flex items-center justify-center w-full h-[70vh] z-50 origin-top"
-          >
+            className="fixed top-0 left-0 flex items-center justify-center w-full h-[70vh] z-50 origin-top">
             <Form value={{ setShowForm, setIsHovered }} />
           </motion.div>
         )}
